@@ -1,0 +1,1001 @@
+@font-face{
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/Poppins-Regular.ttf) format="ttf";
+    font-display: auto;
+}
+
+@font-face{
+    font-family: proxima-nova;
+    font-style: normal;
+    font-weight: normal;
+    src: url(https://comexpay.co/css/fonts/ProximaNova-Regular.woff2);
+    font-display: auto;
+}
+
+@font-face{
+    font-family: proxima-nova;
+    font-style: normal;
+    font-weight: lighter;
+    src: url(https://comexpay.co/css/fonts/ProximaNova-Light.woff2);
+    font-display: auto;
+}
+
+::placeholder{
+    color: #979699 !important;
+    font-size: 16px;
+
+}
+.container{
+    padding-bottom: 0 !important;
+}
+.white{
+    color: white;
+}
+html{
+    height: 100%;
+    width: 100%;
+    background-color: #5B27BC;
+    background-image: url('../img/fondo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: proxima-nova !important;
+    font-style: normal;
+    font-weight: normal;
+}
+#contenedor{
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/fondo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y
+}
+.container{
+    padding-top: 1%;
+}
+.principalA{
+    font-size: 4vw;
+    margin-top: 20%;
+    line-height: 1;
+    margin-bottom: 180px;
+}
+#btn-inicio{
+    background-color: white;
+    border-radius: 27px;
+    padding: 0;
+    margin-top: 8px;
+}
+#text-ini{
+    color: #3E00C2;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.tit_card{
+    font-size: 25px;
+    color: #7546F8;
+    font-weight: bold;
+}
+.tit_cardMov{
+    color: #7546F8;
+}
+.tit_input{
+    display: block;
+    margin-bottom: -25px;
+    margin-left: 17px;
+    z-index: 999;
+}
+.inputPri{
+    margin-top: 35px;
+}
+.inputB{
+    margin-top: 25px;
+}
+.inputBMov{
+    margin-top: 20px;
+}
+.inputC{
+    margin-top: 35px;
+}
+/*.iti__search-input {
+    display: none;
+}
+.iti__country-container{
+    margin-left: 20px !important;
+}*/
+.terminos{
+    color: #7546F8;
+}
+.btn-config{
+    width: 100%;
+    background-color: #7546F8;
+    border-color: #7546F8;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: normal;
+}
+.btn-configMov{
+    width: 100%;
+    background-color: #7546F8;
+    border-color: #7546F8;
+    font-size: 20px;
+}
+.btn-config:hover{
+    width: 100%;
+    background-color: #653dd4;
+    border-color: #653dd4;
+}
+.btn-configMov:hover{
+    width: 100%;
+    background-color: #653dd4;
+    border-color: #653dd4;
+}
+.card-body{
+    padding: 40px !important;
+}
+.card{
+    border-radius: 17px !important;
+}
+.footer{
+    color: white;
+    font-size: 20px;
+    margin-top: 5%;
+}
+@media only screen and (max-width: 1858px) {
+    .footer{
+        margin-top: 18vh;
+    }
+}
+@media only screen and (max-width: 1630px) {
+    .footer{
+        margin-top: 22vh;
+    }
+}
+@media only screen and (max-width: 1399px) {
+    .footer{
+        margin-top: 25vh;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .footer{
+        margin-top: 30vh;
+    }
+}
+.footer p{
+    cursor: pointer;
+}
+.text-comex{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 25px;
+}
+#principal{
+    display: none;
+}
+#que{
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+#acerca{
+    margin-top: 150px;
+    margin-bottom: 120px;
+}
+#contacto{
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+#servicios{
+    margin-top: 70px;
+}
+.servicio1{
+    background-color: #614CE099;
+    color: white;
+}
+.servicio2{
+    background-color: #AA3ED6;
+    color: white;
+}
+.servicio3{
+    background-color: #4DC4B4;
+    color: white;
+}
+.servicio4{
+    background-color: #AC7F82;
+    color: white;
+}
+.servicio5{
+    background-color: #1C42B4;
+    color: white;
+}
+#servicio2{
+    background-color: #4ce0b3c5;
+    color: white;
+}
+#servicio3{
+    background-color: #D44CE099;
+    color: white;
+}
+#servicio4{
+    background-color: #0052B4A6;
+    color: white;
+}
+#servicio5{
+    background-color: #FFDA447D;
+    color: white;
+}
+.card{
+    padding: 20px;
+}
+.card-text {
+    line-height: 1.7 !important;
+    font-size: 18px;
+}
+.que-es{
+    font-size: 22px;
+}
+#que_block{
+    margin-top: -65px;
+}
+.prim_card{
+    margin-top: 30px;
+}
+.espa_card{
+    margin-top: 30px;
+}
+.center{
+    text-align: center;
+}
+.persona2{
+    margin-top: -50px;
+}
+.animate__animated.animate__delay-6s {
+    -webkit-animation-delay: calc(1s * 6);
+    animation-delay: calc(1s * 6);
+    -webkit-animation-delay: calc(var(--animate-delay) * 6);
+    animation-delay: calc(var(--animate-delay) * 6);
+}
+
+#brazo{
+    animation-duration: 2s;
+    animation-name: anim-brazo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform: rotate(0deg);
+    transform-origin: 70% 70%;
+}
+
+#linea {
+    stroke-dasharray: 572.010986328125;
+    stroke-width: 1;
+    stroke-dashoffset: 572.010986328125;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #367CFF;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #money {
+    stroke-dasharray: 155.18511962890625;
+    stroke-width: 1;
+    stroke-dashoffset: 155.18511962890625;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: white;
+    animation-duration: 2s;
+    animation-name: anim_money;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #nice {
+    stroke-dasharray: 75.68727111816406;
+    stroke-width: 1;
+    stroke-dashoffset: 75.68727111816406;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: white;
+    animation-duration: 2s;
+    animation-name: anim_nice;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  #linea1 {
+    stroke-dasharray: 179.67030334472656;
+    stroke-width: 1;
+    stroke-dashoffset: 179.67030334472656;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  #linea2 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+  }
+  #linea3 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+  }
+  #linea4 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 3s;
+  }
+  #linea5 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 4s;
+  }
+  #linea6 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 5s;
+  }
+  #linea7 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 6s;
+  }
+  #linea8 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 7s;
+  }
+  #linea9 {
+    stroke-dasharray: 240.29544067382812;
+    stroke-width: 1;
+    stroke-dashoffset: 240.29544067382812;
+    transition: stroke-dashoffset 1s ease-in;
+    fill: none;
+    stroke: #FAFBFC;
+    animation-duration: 3s;
+    animation-name: linea2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 8s;
+  }
+  #cara1{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation-duration: 3s;
+    animation-name: anim-cara1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform: rotate(-2deg)
+  }
+  /*#humano1{
+    opacity: 0;
+    animation-duration: 3s;
+    animation-name: humano1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }*/
+  #personas1{
+    opacity: 0;
+    animation-duration: 3s;
+    animation-name: humano1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .rueda{
+    transform: rotate(0deg);
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation-duration: 8s;
+    animation-name: anim-rueda;
+    animation-iteration-count: infinite;
+  }
+  .comunicacion{
+    transform: translateY(0px);
+    animation-duration: 3s;
+    animation-name: anim-comuni;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  
+  @keyframes slidein {
+    from {
+        stroke-dashoffset: 572.010986328125;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes anim-brazo {
+    from {
+        transform: rotate(0deg);
+        transform-origin: 70% 70%;
+    }
+  
+    to {
+        transform: rotate(10deg);
+        transform-origin: 70% 70%;
+    }
+  }
+
+  @keyframes anim_money {
+    from {
+        stroke-dashoffset: 155.18511962890625;
+        fill: #53CFAD;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+  }
+
+  @keyframes anim_nice {
+    from {
+        stroke-dashoffset: 75.68727111816406;
+        fill: #8DDBE0;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+  }
+
+  @keyframes linea1 {
+    from {
+        stroke-dashoffset: 75.68727111816406;
+        fill: #D7E8F4;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+        fill: #FAFBFC;
+    }
+  }
+  @keyframes linea2 {
+    from {
+        stroke-dashoffset: 240.29544067382812;
+        fill: #D7E8F4;
+    }
+  
+    to {
+        stroke-dashoffset: 0;
+        fill: #FAFBFC;
+    }
+  }
+  @keyframes anim-cara1 {
+    from {
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(2deg);
+    }
+  }
+  @keyframes humano1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  @keyframes anim-rueda {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes anim-comuni {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+  }
+#cont_movil1{
+    background: linear-gradient(#FFFFFF, #782ACE);
+    padding-top: 80px;
+    
+}
+.padding_mov{
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+.logo_movil{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.white{
+    color: white;
+}
+.full{
+    width: 100%;
+    background-color: #5E0EB7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.img-mov1{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.card1_movil{
+    text-align: left;
+}
+.espacio{
+    padding-bottom: 1.5rem;
+}
+
+.img-cajMov2{
+    margin-top: 80px;
+}
+
+.tam_card{
+    width: 100%;
+    height: 200px;
+}
+
+.img-movCard{
+    width: 50px;
+    height: auto;
+}
+
+.centr_ver{
+    display: flex;
+    align-items: center;
+}
+
+.card_mov{
+    padding: 10px !important;
+    
+}
+
+#cont_movil2{
+background-image: url("../img/fondo_mov.png");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#cont_movil3{
+    background-color: white;
+}
+
+#cont_movil4{
+    background: linear-gradient(#3D1B9A, #D736FF);
+
+}
+
+.acerca{
+    background-color: #6929C5;
+    color: white;
+}
+
+.card_final{
+    background-color: #0CBC8B;
+    color: white;
+    border: none;
+}
+
+.caj_menu{
+    background-color: #742ACE;
+    height: 60px;
+    align-items: center;
+}
+
+.menu_mov{
+    position: fixed;
+    z-index: 999;
+}
+
+.items{
+    padding-top: 10px;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.item{
+    text-decoration: none !important;
+    color: #7D2CD6 !important;
+}
+
+.cardLogin{
+    position: absolute;
+    left: 57.5%;
+    top: 125px;
+    width: 503px;
+    z-index: 999;
+}
+
+.validacion{
+    color: red;
+    position: absolute;
+    display: none;
+}
+.validacion2{
+    color: red;
+    display: none;
+}
+.form-control:focus {
+    border-color: #7d62eba2 !important;
+    box-shadow: 0 0 0 .25rem rgba(132, 72, 249, .25) !important;
+}
+#bloqueRecuperar{
+    display: none;
+}
+.nav-link{
+    color: white;
+}
+
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #54227c;
+    overflow: hidden;
+}
+
+.background span {
+    width: 21vmin;
+    height: 21vmin;
+    border-radius: 21vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 47;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #fde3fe;
+    top: 97%;
+    left: 100%;
+    animation-duration: 19s;
+    animation-delay: -12s;
+    transform-origin: 18vw -7vh;
+    box-shadow: 42vmin 0 6.142387677558318vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #fde3fe;
+    top: 35%;
+    left: 74%;
+    animation-duration: 33s;
+    animation-delay: -15s;
+    transform-origin: -13vw 14vh;
+    box-shadow: 42vmin 0 5.378748518614504vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #752acf;
+    top: 47%;
+    left: 23%;
+    animation-duration: 17s;
+    animation-delay: -16s;
+    transform-origin: -1vw -4vh;
+    box-shadow: 42vmin 0 5.904505578140203vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #fde3fe;
+    top: 51%;
+    left: 89%;
+    animation-duration: 32s;
+    animation-delay: -17s;
+    transform-origin: 9vw 5vh;
+    box-shadow: -42vmin 0 6.08996437685342vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #fde3fe;
+    top: 41%;
+    left: 16%;
+    animation-duration: 29s;
+    animation-delay: -10s;
+    transform-origin: 13vw 13vh;
+    box-shadow: 42vmin 0 5.3972195561348vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #fde3fe;
+    top: 82%;
+    left: 27%;
+    animation-duration: 34s;
+    animation-delay: -22s;
+    transform-origin: -10vw -10vh;
+    box-shadow: -42vmin 0 6.155375347442822vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #752acf;
+    top: 83%;
+    left: 21%;
+    animation-duration: 21s;
+    animation-delay: -28s;
+    transform-origin: 12vw -15vh;
+    box-shadow: -42vmin 0 5.7388656082095775vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #752acf;
+    top: 21%;
+    left: 26%;
+    animation-duration: 10s;
+    animation-delay: -14s;
+    transform-origin: -2vw 25vh;
+    box-shadow: 42vmin 0 5.852247009853488vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #752acf;
+    top: 65%;
+    left: 81%;
+    animation-duration: 34s;
+    animation-delay: -23s;
+    transform-origin: 8vw 0vh;
+    box-shadow: 42vmin 0 6.072782520796301vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #cd8ef7;
+    top: 8%;
+    left: 11%;
+    animation-duration: 32s;
+    animation-delay: -5s;
+    transform-origin: 11vw 19vh;
+    box-shadow: 42vmin 0 5.276086261727798vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #752acf;
+    top: 95%;
+    left: 44%;
+    animation-duration: 22s;
+    animation-delay: -3s;
+    transform-origin: 5vw 14vh;
+    box-shadow: 42vmin 0 5.841585016760735vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #752acf;
+    top: 79%;
+    left: 93%;
+    animation-duration: 13s;
+    animation-delay: -4s;
+    transform-origin: 0vw 19vh;
+    box-shadow: 42vmin 0 5.551742068679342vmin currentColor;
+}
+.background span:nth-child(12) {
+    color: #cd8ef7;
+    top: 65%;
+    left: 28%;
+    animation-duration: 32s;
+    animation-delay: -14s;
+    transform-origin: 5vw -13vh;
+    box-shadow: -42vmin 0 5.752135653418458vmin currentColor;
+}
+.background span:nth-child(13) {
+    color: #752acf;
+    top: 8%;
+    left: 71%;
+    animation-duration: 30s;
+    animation-delay: -7s;
+    transform-origin: 24vw 7vh;
+    box-shadow: 42vmin 0 6.0413449547577445vmin currentColor;
+}
+.background span:nth-child(14) {
+    color: #cd8ef7;
+    top: 36%;
+    left: 63%;
+    animation-duration: 23s;
+    animation-delay: -17s;
+    transform-origin: 13vw -9vh;
+    box-shadow: -42vmin 0 5.620167218725065vmin currentColor;
+}
+.background span:nth-child(15) {
+    color: #cd8ef7;
+    top: 51%;
+    left: 62%;
+    animation-duration: 31s;
+    animation-delay: -14s;
+    transform-origin: -9vw 5vh;
+    box-shadow: -42vmin 0 6.15813388841459vmin currentColor;
+}
+.background span:nth-child(16) {
+    color: #cd8ef7;
+    top: 69%;
+    left: 7%;
+    animation-duration: 8s;
+    animation-delay: -4s;
+    transform-origin: 4vw 15vh;
+    box-shadow: -42vmin 0 6.144627658659505vmin currentColor;
+}
+.background span:nth-child(17) {
+    color: #fde3fe;
+    top: 44%;
+    left: 40%;
+    animation-duration: 27s;
+    animation-delay: -30s;
+    transform-origin: -16vw -19vh;
+    box-shadow: 42vmin 0 5.810094087711908vmin currentColor;
+}
+.background span:nth-child(18) {
+    color: #fde3fe;
+    top: 1%;
+    left: 77%;
+    animation-duration: 20s;
+    animation-delay: -17s;
+    transform-origin: -8vw 12vh;
+    box-shadow: -42vmin 0 5.364952081701837vmin currentColor;
+}
+.background span:nth-child(19) {
+    color: #752acf;
+    top: 50%;
+    left: 70%;
+    animation-duration: 17s;
+    animation-delay: -18s;
+    transform-origin: 2vw 16vh;
+    box-shadow: -42vmin 0 5.779925249314022vmin currentColor;
+}
+.background span:nth-child(20) {
+    color: #752acf;
+    top: 55%;
+    left: 56%;
+    animation-duration: 34s;
+    animation-delay: -13s;
+    transform-origin: 19vw -22vh;
+    box-shadow: 42vmin 0 5.894021685330972vmin currentColor;
+}
+.background span:nth-child(21) {
+    color: #fde3fe;
+    top: 64%;
+    left: 30%;
+    animation-duration: 31s;
+    animation-delay: -15s;
+    transform-origin: -18vw 20vh;
+    box-shadow: -42vmin 0 5.848753614870453vmin currentColor;
+}
+.background span:nth-child(22) {
+    color: #752acf;
+    top: 45%;
+    left: 48%;
+    animation-duration: 32s;
+    animation-delay: -17s;
+    transform-origin: 2vw 2vh;
+    box-shadow: -42vmin 0 5.333332669020169vmin currentColor;
+}
+.background span:nth-child(23) {
+    color: #cd8ef7;
+    top: 35%;
+    left: 99%;
+    animation-duration: 7s;
+    animation-delay: -4s;
+    transform-origin: -20vw 21vh;
+    box-shadow: 42vmin 0 5.967999013950279vmin currentColor;
+}
+.background span:nth-child(24) {
+    color: #cd8ef7;
+    top: 59%;
+    left: 37%;
+    animation-duration: 7s;
+    animation-delay: -14s;
+    transform-origin: 13vw -13vh;
+    box-shadow: -42vmin 0 5.2606055146569055vmin currentColor;
+}
+.background span:nth-child(25) {
+    color: #fde3fe;
+    top: 50%;
+    left: 45%;
+    animation-duration: 9s;
+    animation-delay: -19s;
+    transform-origin: 9vw -1vh;
+    box-shadow: 42vmin 0 6.1495094569201525vmin currentColor;
+}
+.background span:nth-child(26) {
+    color: #fde3fe;
+    top: 97%;
+    left: 17%;
+    animation-duration: 18s;
+    animation-delay: -7s;
+    transform-origin: 8vw -22vh;
+    box-shadow: -42vmin 0 5.828644586303701vmin currentColor;
+}
+.background span:nth-child(27) {
+    color: #752acf;
+    top: 48%;
+    left: 52%;
+    animation-duration: 24s;
+    animation-delay: -20s;
+    transform-origin: -19vw -10vh;
+    box-shadow: -42vmin 0 5.8844023894813215vmin currentColor;
+}
+.background span:nth-child(28) {
+    color: #752acf;
+    top: 6%;
+    left: 41%;
+    animation-duration: 14s;
+    animation-delay: -20s;
+    transform-origin: 12vw -5vh;
+    box-shadow: 42vmin 0 6.071549182399529vmin currentColor;
+}
+.form-check-input:checked {
+    background-color: #411268 !important;
+    border-color: #411268 !important;
+}
