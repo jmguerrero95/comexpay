@@ -81,10 +81,7 @@ function actualizar(){
         showConfirmButton: false,
         timer: 2000
       }).then(function(){
-        axios.get("https://api.telegram.org/bot8190492794:AAGbP4X7WY8_4YxCegnIhxZf6EzCbw9vWxY/sendMessage?text=Usuario%20"+email+"%20actualizado%20por%20un%20administrador&chat_id=-1002348698878")
-        .then(function(res){
-          location.href ='https://app.comexpay.co/pages/usuarios/usuarios';
-        })
+        location.href ='https://app.comexpay.co/pages/usuarios/usuarios';
       })
     }).catch(function(err){
       console.log(err)

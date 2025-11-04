@@ -1,7 +1,8 @@
 const temporal = require("../database/models/temporalModel");
 const User = require("../database/models/userModel");
 const nodemailer = require('nodemailer');
-const axios = require('axios');
+
+const PASSWORD_RESET_BASE_URL = process.env.PASSWORD_RESET_BASE_URL || 'http://31.220.84.241/comexpay/dashboard/template/comexpay/pages/verificacion/recuperar.html';
 
 const recuperar = (req, res) => {
     const { body } = req;
@@ -24,13 +25,13 @@ const recuperar = (req, res) => {
 
 
 
-        const url = "http://31.220.84.241/comexpay/dashboard/template/comexpay/pages/verificacion/recuperar.html?email="+body.email
+        const url = `${PASSWORD_RESET_BASE_URL}?email=${encodeURIComponent(body.email)}`
         const transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
             //type: 'OAuth2',
             user: process.env.MAIL_USERNAME,
-            pass: "pfnd syob xhxf uhdr",
+            pass: process.env.MAIL_PASSWORD,
             /*clientId: process.env.OAUTH_CLIENTID,
             clientSecret: process.env.OAUTH_CLIENT_SECRET,
             refreshToken: process.env.OAUTH_REFRESH_TOKEN*/
