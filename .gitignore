@@ -1,2 +1,16 @@
+# Environment files
 .env
-node_modules
+.env.*
+!.env.example
+!api/.env.example
+
+# Dependency directories
+node_modules/
+api/node_modules/
+
+# Logs
+*.log
+api/*.log
+
+# Runtime artifacts
+api/files/

@@ -1,2 +1,11 @@
+# Environment files
 .env
-node_modules
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Logs and runtime artifacts
+*.log
+files/
