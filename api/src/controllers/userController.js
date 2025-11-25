@@ -10,13 +10,14 @@ const nodemailer = require('nodemailer');
 //const blazeface = require('@tensorflow-models/blazeface');
 //const { createCanvas, Image } = require('canvas');
 //const fs = require('fs');
-const axios = require('axios');
 const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 const jwt = require('jsonwebtoken');
+const { sendTelegramMessage, sendSms } = require("../services/notificationService");
 //const ffmpeg = require('fluent-ffmpeg');
 //ffmpeg.setFfmpegPath(ffmpegPath);
 //const path = require('path');
 const JWT_SECRET = process.env.JWT_SECRET
+const PBKDF2_SALT = process.env.PBKDF2_SALT || 'ddascvgrwfbntjklyl';
 
 //let model;
 
@@ -54,7 +55,7 @@ const createNewUser = (req, res) => {
           res.status(201).send({ status: "OK", data: 0});
           return
         }else
-        crypto.pbkdf2(body.password, 'ddascvgrwfbntjklyl', 100000, 64, 'sha512', (err, derivedKey) => {
+        crypto.pbkdf2(body.password, PBKDF2_SALT, 100000, 64, 'sha512', (err, derivedKey) => {
           if (err) throw err;
           // Printing the derived key
           passHash = derivedKey.toString('hex');
@@ -69,9 +70,6 @@ const createNewUser = (req, res) => {
               emailCode: num,
             };
             const createduser = userService.createNewUser(newUser);
-            console.log(createduser.email)
-    
-    
             /*const transporter = nodemailer.createTransport({
               service: 'gmail',
               auth: {
@@ -142,7 +140,7 @@ const getuser = (req, res) => {
       },
     });
   }
-  crypto.pbkdf2(body.password, 'ddascvgrwfbntjklyl', 100000, 64, 'sha512', (err, derivedKey) => {
+  crypto.pbkdf2(body.password, PBKDF2_SALT, 100000, 64, 'sha512', (err, derivedKey) => {
     if (err) throw err;
     // Printing the derived key
     passHash = derivedKey.toString('hex');
@@ -326,16 +324,13 @@ const veriEmail = (req, res) => {
   try{
     user.find({_id: body.id}).then((data) => {
       if(data[0].emailCode == body.codigo){
-        console.log(data[0].phone)
         const num = Math.floor((Math.random() * (9999 - 1000 + 1)) + 1000)
-        axios.get("https://api.telegram.org/bot8190492794:AAGbP4X7WY8_4YxCegnIhxZf6EzCbw9vWxY/sendMessage?text=Usuario:%20"+data[0].email+"codigo%20de%20confirmación:%20"+num+"&chat_id=-1002348698878")
-        const url = 'http://api.labsmobile.com/get/send.php?username=info@globalcoins.co&password=cs692gnMUCcXxQYWPDWnbKbF957uzqqC&msisdn=+57' + data[0].phone + '&message=Tu código de confirmación Comexpay es: ' + num
-        axios.get(url)
-        .then((response) => {
-          console.log("response")
-        })
-        .catch((error) => {
-          console.log("error")
+        const confirmationMessage = `Usuario: ${data[0].email} codigo de confirmación: ${num}`;
+        sendTelegramMessage(confirmationMessage).catch((error) => {
+          console.error('Failed to send Telegram confirmation message', error);
+        });
+        sendSms(`+57${data[0].phone}`, `Tu código de confirmación Comexpay es: ${num}`).catch((error) => {
+          console.error('Failed to send SMS confirmation code', error);
         });
         user.findOneAndUpdate(
           { _id: body.id },
@@ -349,35 +344,6 @@ const veriEmail = (req, res) => {
     }).catch((error) => {
       res.status(401).send({ status: "FAILED", data: [] })
     });
-    /*user.find({_id: body.id}).then((data) => {
-      console.log(data[0].phone)
-      const num = Math.floor((Math.random() * (9999 - 1000 + 1)) + 1000)
-
-      axios.get("https://api.telegram.org/bot8190492794:AAGbP4X7WY8_4YxCegnIhxZf6EzCbw9vWxY/sendMessage?text=Usuario:%20"+data[0].email+"codigo%20de%20confirmación:%20"+num+"&chat_id=-1002348698878")
-
-
-      const url = 'http://api.labsmobile.com/get/send.php?username=info@globalcoins.co&password=cs692gnMUCcXxQYWPDWnbKbF957uzqqC&msisdn=+57' + data[0].phone + '&message=Tu código de confirmación Comexpay es: ' + num
-      axios.get(url)
-      .then((response) => {
-        console.log("response")
-      })
-      .catch((error) => {
-        console.log("error")
-      });
-
-
-      user.findOneAndUpdate(
-        { _id: body.id },
-        { $set: {emailVerifi: true, phoneCode: num} },
-        { new: true }
-      ).then((data) => {
-        res.status(201).send({ status: "OK", data: data});
-      }).catch((error) => error);
-        res.status(201).send({status: "OK", data:[]})
-    }).catch((error) => {
-      res.status(401).send({ status: "FAILED", data: [] })
-    });*/
-
   } catch (error) {
     res
       .status(error?.status || 500)
@@ -403,18 +369,17 @@ const actualizarPass = (req, res) => {
   let passHash
   const user = User;
   try{
-    crypto.pbkdf2(body.password, 'ddascvgrwfbntjklyl', 100000, 64, 'sha512', (err, derivedKey) => {
+    crypto.pbkdf2(body.password, PBKDF2_SALT, 100000, 64, 'sha512', (err, derivedKey) => {
       passHash = derivedKey.toString('hex');
       user.find({_id: body.id}).then((data) => {
         if(data[0].password == passHash){
-          crypto.pbkdf2(body.newpassword, 'ddascvgrwfbntjklyl', 100000, 64, 'sha512', (err, derivedKey) => {
+          crypto.pbkdf2(body.newpassword, PBKDF2_SALT, 100000, 64, 'sha512', (err, derivedKey) => {
             passHash = derivedKey.toString('hex');
             user.findOneAndUpdate(
               { _id: body.id },
               { $set: {password: passHash} },
               { new: true }
             ).then((data) => {
-              console.log(data)
 
               const transporter = nodemailer.createTransport({
                 host: process.env.MAIL_HOST,
@@ -602,9 +567,8 @@ const cambiarContra = (req, res) => {
     temporal.deleteOne(
       {valor: body.uuid}
     ).then((data) => {
-      console.log(data.deletedCount)
       if(data.deletedCount != 0){
-        crypto.pbkdf2(body.password, 'ddascvgrwfbntjklyl', 100000, 64, 'sha512', (err, derivedKey) => {
+        crypto.pbkdf2(body.password, PBKDF2_SALT, 100000, 64, 'sha512', (err, derivedKey) => {
           passHash = derivedKey.toString('hex');
           user.findOneAndUpdate(
             { _id: body.id },
@@ -634,7 +598,6 @@ const cambiarContra = (req, res) => {
         res.status(201).send({status: "OK", data: 0})
       }
     }).catch((data) => {
-      console.log(data)
     })
 
   } catch (error) {
@@ -668,6 +631,12 @@ const editUser = (req, res) => {
       { $set: {name: body.name, lastName: body.lastName, email: body.email, phone: body.phone} },
       { new: true }
     ).then((data) => {
+      if (data) {
+        const message = `Usuario ${data.email} actualizado por un administrador`;
+        sendTelegramMessage(message).catch((error) => {
+          console.error('Failed to send Telegram admin update message', error);
+        });
+      }
       res.status(201).send({ status: "OK", data: data});
     }).catch((error) => error);
 

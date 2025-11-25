@@ -1,5 +1,14 @@
 # **Crossfit Wod Api**
 
+## Environment configuration
+
+Copy the `.env.example` file to `.env` and provide your own credentials before running the service. The file is intentionally excluded from version control to avoid leaking secrets.
+
+```bash
+cp .env.example .env
+# Update the new .env file with your real values
+```
+
 ## How to run the app with docker:
 
 > For running the app using docker you might have installed docker on your system. If you have not it <a href="https://docs.docker.com/engine/install/">Click Here</a>. After it, you should run this commands to start the container: 
